@@ -1,0 +1,33 @@
+body{
+    background-color: aquamarine;
+    font-family: monospace;
+}
+
+header,footer{
+    background-color: darkgoldenrod;
+}
+header{
+    padding: 1.87em 1.25em 1.25em 3.125em;
+}
+
+footer{
+    padding: 0.625em 1.25em 1.25em 3.125em;
+}
+header{
+    padding: 1.25em 1em 1.25em 1em; /*up, right, down, left*/
+}
+
+section{
+    padding: 1.25em 1em 1.25em 1em;
+}
+
+
+
+
+nav {
+    background-color: cadetblue;
+}
+.sobre {
+    background-color: darkcyan;
+
+}
