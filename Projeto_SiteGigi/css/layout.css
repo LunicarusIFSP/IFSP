@@ -1,6 +1,8 @@
 body{
     background-color: aquamarine;
     font-family: monospace;
+    margin: auto;
+    border: 1em black;
 }
 
 header,footer{
@@ -8,10 +10,12 @@ header,footer{
 }
 header{
     padding: 1.87em 1.25em 1.25em 3.125em;
+    top: 0;
 }
 
 footer{
     padding: 0.625em 1.25em 1.25em 3.125em;
+    clear: left;
 }
 header{
     padding: 1.25em 1em 1.25em 1em; /*up, right, down, left*/
@@ -19,6 +23,8 @@ header{
 
 section{
     padding: 1.25em 1em 1.25em 1em;
+    height: 400px;
+    width: auto;
 }
 
 
@@ -26,8 +32,13 @@ section{
 
 nav {
     background-color: cadetblue;
+    color: darkslategrey;
+    float: left;
 }
 .sobre {
     background-color: darkcyan;
 
+}
+nav{
+    list-style-type:none;
 }
