@@ -1,12 +1,18 @@
 body{
     background-color: aquamarine;
-    font-family: monospace;
+    font-family: MySoul , monospace;
     margin: auto;
+    padding: auto;
     border: 1em black;
+    text-align: left;
 }
-
+@font-face {
+    font-family: My Soul;
+    src: url(/fontes/MySoul.ttf);
+}
 header,footer{
     background-color: darkgoldenrod;
+    font-family: "My Soul";
 }
 header{
     padding: 1.87em 1.25em 1.25em 3.125em;
@@ -26,7 +32,15 @@ section{
     height: 400px;
     width: auto;
 }
-
+.menu{
+    margin: 0;
+    margin: 0;
+    width: 150px;
+}
+ .menu li{
+    position: relative;
+    list-style-type: none;
+ }
 
 
 
