@@ -1,58 +1,74 @@
-body{
-    background-color: aquamarine;
-    font-family: MySoul , monospace;
-    margin: auto;
-    padding: auto;
-    border: 1em black;
-    text-align: left;
-}
-@font-face {
-    font-family: My Soul;
+/* @font-face {
+    font-family: MySoul;
     src: url(/fontes/MySoul.ttf);
+} */
+*{
+    margin: 0;
+    padding: 0;
 }
-header,footer{
-    background-color: darkgoldenrod;
+
+body{
+    background-color: black;
     font-family: "My Soul";
+    margin: auto;
+    width: 780px;
+    height: auto;
+    text-align: left;
+    border: 1px solid black;
+    color: darkgoldenrod;
 }
+
+header,footer{
+    background-color: darkred;
+}
+nav {
+    background-color: cadetblue;
+    color: darkslategrey;
+    width: 180px;
+    height: 400px;
+    float: left;
+}
+
 header{
-    padding: 1.87em 1.25em 1.25em 3.125em;
+    height: 80px;
     top: 0;
 }
 
 footer{
-    padding: 0.625em 1.25em 1.25em 3.125em;
-    clear: left;
-}
-header{
-    padding: 1.25em 1em 1.25em 1em; /*up, right, down, left*/
+   height: 20px;
 }
 
 section{
-    padding: 1.25em 1em 1.25em 1em;
     height: 400px;
     width: auto;
 }
 .menu{
     margin: 0;
-    margin: 0;
-    width: 150px;
+    padding: 0;
+    width: 180px;
+    list-style-type: none;
 }
  .menu li{
     position: relative;
-    list-style-type: none;
  }
-
-
-
-nav {
-    background-color: cadetblue;
-    color: darkslategrey;
-    float: left;
+.submenu{
+    display: none;
+    list-style: none;
+    position: absolute;
+    left: 150px;
+    top: 0;
 }
-.sobre {
-    background-color: darkcyan;
-
+.menu li a{
+    display: block;
+    background: darkred;
+    color: gold;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid black;
 }
-nav{
-    list-style-type:none;
+li:hover ul{
+    display: block;
+}
+.menu li a:hover{
+    text-decoration:underline;
 }
