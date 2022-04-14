@@ -8,6 +8,7 @@
 }
 
 body{
+    text-align: center;
     background-color: black;
     font-family: "My Soul";
     margin: auto;
@@ -46,7 +47,7 @@ section{
     margin: 0;
     padding: 0;
     width: 180px;
-    list-style-type: none;
+    list-style: none;
 }
  .menu li{
     position: relative;
@@ -71,4 +72,6 @@ li:hover ul{
 }
 .menu li a:hover{
     text-decoration:underline;
+    font-weight: bold;
+    background: darkgoldenrod;
 }
