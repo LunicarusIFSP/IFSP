@@ -29,7 +29,7 @@ void encanador() {
     float diaria;
     printf("informe os dias trabalhados pelo encanador: ");
     scanf_s("%f", &diaria);
-    printf("O teu salario com aumento é: %.2f ", diaria * 20 * 0.92);
+    printf("O pagamento do encanador e de: %.2f ", diaria * 20 * 0.92);
 }
 
 void concurso() {
@@ -61,5 +61,7 @@ void ZincoCobre() {
     printf("voce conseguira forjar %f de latao, tendo resto de %f de cobre e %f de zinco: ", total, restoCobre,restoZinco);
 }
 int main() {
-    ASCII();
+    //inserir a funcao do exercicio desejado
+    aumento();
+    return 0;
 }
