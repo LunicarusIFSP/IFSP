@@ -1,71 +1,66 @@
-/* @font-face {
+@font-face {
     font-family: MySoul;
-    src: url(/fontes/MySoul.ttf);
-} */
+    src: url(../fontes/MySoul.ttf);
+}
 *{
     margin: 0;
     padding: 0;
 }
-
 body{
-    text-align: center;
-    background-color: black;
-    font-family: "My Soul";
+    background-color: cornsilk;
+    font-family:monospace;
     margin: auto;
     width: 780px;
     height: auto;
     text-align: left;
     border: 1px solid black;
-    color: darkgoldenrod;
 }
-
-header,footer{
-    background-color: darkred;
+header, footer{
+    background-color: orange;
 }
-nav {
-    background-color: cadetblue;
-    color: darkslategrey;
+nav{
+    background-color: goldenrod;
+    color:beige;
     width: 180px;
     height: 400px;
     float: left;
 }
-
 header{
     height: 80px;
     top: 0;
 }
-
 footer{
-   height: 20px;
+    height: 20px;
 }
-
 section{
-    height: 400px;
     width: auto;
+    height: 400px;
 }
 .menu{
     margin: 0;
     padding: 0;
-    width: 180px;
     list-style: none;
+    width: 180px;
 }
- .menu li{
+.menu li{
     position: relative;
- }
+
+}
 .submenu{
-    display: none;
     list-style: none;
     position: absolute;
-    left: 150px;
-    top: 0;
+    left: 180px;
+    width: 180px;
+    top:0;
+    display: none;
 }
 .menu li a{
     display: block;
-    background: darkred;
-    color: gold;
     text-decoration: none;
+    color:green;
+    background: greenyellow;
     padding: 5px;
-    border: 2px solid black;
+    border: 1px solid green ;
 }
 li:hover ul{
     display: block;
@@ -73,5 +68,5 @@ li:hover ul{
 .menu li a:hover{
     text-decoration:underline;
     font-weight: bold;
-    background: darkgoldenrod;
+    background: beige;
 }
