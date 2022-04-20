@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!--coding html -->
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="../css/layout.css">
+        <link rel="stylesheet" href="../css/fomulario.css">
+        <link rel="icon" type="image/x-icon" href="imagens/favicon(1).ico">
+
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+        <link href="https://fonts.googleapis.com/css2?family=My+Soul&display=swap" rel="stylesheet">
+
+        <title>Lucas S.Cruz</title>
+    </head>
+    <body>
+        <header style="text-align: center;">
+            Cabeçalho Do site
+        </header>
+        <nav>
+            <ul class="menu">
+                <li> <a href="/index.html">Página Principal</a></li>
+                <li> <a href="paginas/sobre.html">Apresentação da disciplina</a></li>
+                <li> <a href="#">Linguagens</a>
+                    <ul class="submenu">
+                        <li> <a href="paginas/profissao.html">HTML</a></li>
+                        <li> <a href="#">CSS</a></li>
+                        <li> <a href="#">JavaScript</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">contato</a></li>
+            </ul>
+        </nav>
+        <main>
+            <form action="confirmacao.html" method="post">
+                <label for="nome">nome</label>
+                <input type="text" name="mome" id="usuario_nome">
+
+                <label for="sobrenome">sobrenome</label>
+                <input type="text" name="sobrenome" id="usuario_sobrenome"> <br>
+                <label for="genero">genero</label>  <br>
+
+                <input type="radio" name="genero" id="feminino"  value= "feminino"> 
+                <label for="feminino">feminino</label> <br>
+
+                <input type="radio" name="genero" id="masculino" value="masculino"> 
+                <label for="masculino">masculino</label> <br>
+
+                <input type="radio" name="genero" id="outros" value="outros">
+                <label for="outros">outros</label> <br> 
+
+                <label for="date">Data de nascimento</label>
+                <input type="date" name="datadascimento" value="yyyy-MM-dd" id="dtnas"><br>
+
+                <label for="telefone">telefone</label> 
+                <input type="tell" name="telefone" id="telefone"  placeholder="99-99999-9999"> <br>
+
+                <label for="email">email</label>
+                <input type="email"  id="emailuser" placeholder="email"> <br>
+
+                <label for="mensagem"></label>
+                <textarea name="mensagem" id="mensagem" cols="20" rows="2" placeholder="digite sua mensagem"></textarea> <br>
+
+                <div>
+                    <button type="submit" value="enviar">Enviar</button>
+                    <button type="reset" value="limpar">Limpar</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            &copy;Lucas da Silva Cruz
+        </footer>
+    </body>
+</html>
