@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../backend/calculadora.js"></script>
+</head>
+<body>
+    <form action="#" method="post" name="calculadora">
+        <p>
+            <label for="numero1">Digite o Primeiro valor:</label>
+            <input type="text" name="numero1" id="numero1">
+        </p>
+        <p>
+            <label for="numero2">Digite o Segundo valor:</label>
+            <input type="text" name="numero2" id="numero2">
+        </p>
+
+        <p>
+            Operações: 
+            <select name="operacoes">
+                <option value="adicao">+</option>
+                <option value="sub">-</option>
+                <option value="mult">*</option>
+                <option value="div">/</option>
+            </select>
+        </p>
+        <p>
+            <input type="button" value="calcular" name="Calcular1" onclick = "calcular(this.form)">
+            <button type="reset">Limpar</button>
+        </p>
+        <p>
+            <label for="resultado">Resultado:</label>
+            <input type="text" name="resultado" id="resultado">
+        </p>
+    </form>
+</body>
+</html>
