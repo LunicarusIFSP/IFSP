@@ -1,7 +1,7 @@
 #include <iostream>
 
 void Exercicio1() {
-  //salva nota de 3 provas e 4 trabalhos e depois apresenta a media
+	//
 	float provas[3], trabalhos[4], totalNotas = 0, totalTrabalhos = 0;
 	printf("digite as notas das provas");
 	for (int i = 0; i < 3; i++)
@@ -24,8 +24,8 @@ void Exercicio1() {
 	}
 	printf("a media do aluno eh: %.2f", ((totalNotas + totalTrabalhos) / 7));
 }
+
 void Exercicio3() {
-  //converte temperatura em celcius em Faenheit
 	float F, C;
 	printf("informe a temperatura em Celcius");
 	scanf_s("%f", &C);
@@ -34,7 +34,6 @@ void Exercicio3() {
 }
 
 void Exercicio7() {
-  //imprime os 30 primeiros numeros da sequencia fibbonaci
 		int a = 0, b = 1, total = 0;
 		printf("1 ");
 		for (int i = 0; i < 29; i++) {
@@ -45,7 +44,26 @@ void Exercicio7() {
 		}
 }
 
+void Desafio1() {
+	float matriz[4][5];
+	float maior = 0;
+	float menor;
+	for (int i = 0; i < 4; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			printf("informe o valor da posicao matriz[%d][%d]:", i, j);
+			scanf_s("%f",&matriz[i][j]);
+			if (matriz[i][j] > maior) {
+				maior = matriz[i][j];
+			 }
+		}
+
+	}
+
+	printf("%f", maior);
+}
 int main() {
-	Exercicio3();
+	Desafio1();
 	return 0;
 }
