@@ -47,7 +47,7 @@ void Exercicio7() {
 void Desafio1() {
 	float matriz[4][5];
 	float maior = 0;
-	float menor;
+	float menor,aux;
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 3; j++)
@@ -57,6 +57,7 @@ void Desafio1() {
 			if (matriz[i][j] > maior) {
 				maior = matriz[i][j];
 			 }
+			
 		}
 
 	}
