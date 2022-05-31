@@ -44,26 +44,36 @@ void Exercicio7() {
 		}
 }
 
+#include <iostream>
+
+
 void Desafio1() {
 	float matriz[4][5];
 	float maior = 0;
-	float menor,aux;
+	float menor;
+	float aux;
 	for (int i = 0; i < 4; i++)
 	{
 		for (int j = 0; j < 3; j++)
 		{
 			printf("informe o valor da posicao matriz[%d][%d]:", i, j);
-			scanf_s("%f",&matriz[i][j]);
+			scanf_s("%f", &matriz[i][j]);
 			if (matriz[i][j] > maior) {
 				maior = matriz[i][j];
-			 }
-			
+
+				if (matriz[i][j] < menor) {
+					menor = matriz[i][j];
+				}
+
+			}
+			float menor = matriz[0][0];
 		}
-
+		printf("Maior: %f\nMenor: %f", maior, menor);
 	}
-
-	printf("%f", maior);
 }
+int main() {
+	Desafio1();
+	}
 int main() {
 	Desafio1();
 	return 0;
