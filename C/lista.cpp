@@ -8,7 +8,7 @@
 		- Rafael de Souza Lima
 		- Thais de Jesus Silva Rocha */
 
-//Exercicios 1,3,5,7
+//Exercicios 1,3,5,7 e desafio 1
 void Exercicio1() { //lucas
 	//
 	float provas[3], trabalhos[4], totalNotas = 0, totalTrabalhos = 0;
@@ -40,6 +40,30 @@ void Exercicio3() { //lucas
 	scanf_s("%f", &C);
 	F = (C * 1.8F) + 32;
 	printf("temperatura convertida em Fahenheit: %.2f\F",F);
+}
+void Desafio1() {
+	float matrix[4][5];
+	float maior = 0, menor;
+	for (int i = 0; i < 4; i++) {
+		for (int j = 0;j < 5;j++) {
+			printf("matrix[%d][%d] ",i,j);
+			scanf_s("%f", &matrix[i][j]);
+			if (j == 0 && i == 0) {
+				menor = matrix[i][j];
+			}
+			if (maior < matrix[i][j]) {
+				maior = matrix[i][j];
+				continue;
+			}
+			if (menor > matrix[i][j]) {
+				menor = matrix[i][j];
+				continue;
+			}
+		}
+
+	}
+	printf("maior valor: %.2f\n", maior);
+	printf("menor valor: %.2f\n", menor);
 }
 void Exercicio5() { //Thais
     int mes;
