@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/FrontEnd/CSS/index.css">
+    <script src="/BackEnd/formulario.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li> <a href="/index.html">Home</a></li>
+                <li> <a href="/FrontEnd/HTML/projects.html">Projects</a>
+                    <ul class="submenu">
+                        <li> <a href="/FrontEnd/HTML/poetry.html">Poetry</a></li>
+                        <li> <a href="/FrontEnd/HTML/DS.html">Data Science</a></li>
+                    </ul>
+                </li>
+                <li><a href="/FrontEnd/HTML/contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<br>
+    <main>
+        <h1 style="text-align: center;">Pleasure to meet you, my name is Lucas</h1> <br>
+        <p>I do Freelance Data Science Projects, If you already know my job, feel free to send a request:</p>
+        <form action="" method="post">
+            <label for="name">Name</label>
+            <input type="text"><br>
+            <label for="email">email</label>
+            <input type="email" name="user_email" id="user_email">
+            <br><label for="number">Contact Number</label>
+            <input type="tel" name="tel" id="tel"><br>
+            <label for="Select">Select the project type: </label>
+            <input type="checkbox" name="DV" id="dv">Data Visualization
+            <input type="checkbox" name="SC" id="sc">Scientific Computing <br>
+            <input type="submit" value="Send Request" onclick="formulario()">
+            <button type="reset">Refresh Form</button>
+        </form>
+    </main>
+    <footer>
+    <address>
+        <p style="text-align: center;">Created by: <a href="mailto:lucas6_jau@hotmail.com">&copy;Lucas da Silva Cruz</a></p>
+    </address>
+    </footer>
+</body>
+</html>
