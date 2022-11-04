@@ -1,0 +1,17 @@
+CREATE DATABASE biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE livros(
+	isbn VARCHAR(15) NOT NULL PRIMARY KEY
+);
+CREATE TABLE emprestar(
+	isbn varchar(15) ,
+    numeracao,
+    codigo,
+    data_emprestimo,
+    PRIMARY KEY (isbn,numeracao, codigo, data_emprestimo),
+    FOREIGN KEY (codigo) REFERENCES associado(codigo),
+    FOREIGN KEY(isbn,numeracao) REFERENCES exemplares(isbn,numeracao)
+    
+);
