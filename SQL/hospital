@@ -1,0 +1,74 @@
+CREATE DATABASE hospital;
+USE hospital;
+
+CREATE TABLE paciente(
+	CPF DECIMAL(11) NOT NULL ,
+    nome VARCHAR(30) NOT NULL,
+    idade DECIMAL(3),
+    PRIMARY KEY(CPF)
+);
+
+CREATE TABLE endereco(
+	CPF DECIMAL(11) NOT NULL,
+    rua VARCHAR(50) NOT NULL,
+	numero VARCHAR(6) NOT NULL,
+    bairro VARCHAR(30) NOT NULL,
+    cidade VARCHAR(30) NOT NULL,
+    estado CHAR(2) NOT NULL,
+    cep NUMERIC(8) NOT NULL,
+    PRIMARY KEY(CPF),
+    FOREIGN KEY(CPF) REFERENCES paciente(CPF)
+);
+
+CREATE TABLE medico(
+	CRM NUMERIC(10) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    especialidade VARCHAR(20) NOT NULL,
+    telefone DECIMAL(11),
+    PRIMARY KEY(CRM)
+);
+
+CREATE TABLE telefone_paciente(
+	CPF DECIMAL(11) NOT NULL,
+    numero DECIMAL(11) NOT NULL,
+    PRIMARY KEY(CPF,numero),
+    FOREIGN KEY(CPF) REFERENCES paciente(CPF)
+);
+ 
+CREATE TABLE exame(
+	codigo VARCHAR(10) NOT NULL,
+    nome VARCHAR(30) NOT  NULL,
+    preparo VARCHAR(100) NOT NULL,
+    PRIMARY KEY(codigo)
+);
+
+CREATE TABLE medico_paciente(
+	CPF DECIMAL(11) NOT NULL,
+    CRM NUMERIC(10) NOT NULL,
+    PRIMARY KEY (CPF, CRM),
+    FOREIGN KEY (CPF) REFERENCES paciente(CPF),
+    FOREIGN KEY (CRM) REFERENCES medico(CRM)
+    );
+CREATE TABLE diagnostico(
+	codigo INT NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    descricao VARCHAR(100) NOT NULL,
+    CRM DECIMAL(10) NOT NULL,
+    CPF DECIMAL(11) NOT NULL,
+    PRIMARY KEY (codigo),
+    FOREIGN KEY(CPF) REFERENCES paciente(CPF),
+    FOREIGN KEY(CRM) REFERENCES medico(CRM)
+);
+
+CREATE TABLE paciente_medico_exame(
+	CRM NUMERIC(10) NOT NULL,
+    CPF NUMERIC(11) NOT NULL,
+    codigo VARCHAR(10) NOT NULL,
+    data_exame TIMESTAMP NOT NULL,
+    resultado VARCHAR(200) NOT NULL,
+    PRIMARY KEY(CRM,CPF,codigo,data_exame),
+    FOREIGN KEY(CRM) REFERENCES medico(CRM),
+    FOREIGN KEY (CPF) REFERENCES paciente(CPF),
+    FOREIGN KEY (codigo) REFERENCES exame(codigo)
+    
+);
