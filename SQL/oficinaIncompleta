@@ -1,0 +1,52 @@
+create database OFICINA;
+
+USE OFICINA;
+
+/*
+	Cliente(IDcliente,Nome,bairro,rua,número,complemento, telefone)
+	Carro(IDcarro, placa, Descrição)
+	Cliente_Carro(#IDcliente, #IDcarro)
+	OS(ID_OS,#IDcarro,dataEmissão,DataEntrega)
+	Serviços(IDserviço,descrição, valor)
+	peças(IDpeça,descrição, valor)
+	Mecanico_OS(#IDmecanico,#ID_OS)
+	Serviços_OS(#ID_serviço,#ID_OS)
+	peças_OS(#ID_peça,#ID_OS)
+*/
+CREATE TABLE cliente(
+	CPF_CNPJ NUMERIC(15) NOT NULL,
+    nome VARCHAR(30) NOT NULL,
+    cidade VARCHAR(20) NOT NULL,
+    bairro VARCHAR(20) NOT NULL,
+    rua VARCHAR(20) NOT NULL,
+    numero VARCHAR(5) NOT NULL,
+    complemento VARCHAR(30),
+    telefone numeric(14) NOT NULL,
+    PRIMARY KEY (CPF)
+);
+
+CREATE TABLE carro(
+	IDcarro INT NOT NULL AUTO_INCREMENT,
+    placa VARCHAR(15),
+    descricao VARCHAR(100)
+);
+CREATE TABLE Cliente_Carro(
+	IDcliente NUMERIC(11) NOT NULL, 
+	IDcarro INT NOT NULL AUTO_INCREMENT,
+    FOREIGN KEY (IDcliente) REFERENCES cliente(CPF_CNJcliente),
+    FOREIGN KEY (IDcarro) REFERENCES carro(IDcarro)
+    );
+CREATE TABLE OS(
+#OS(ID_OS,#IDcarro,dataEmissão,DataEntrega)
+	ID_OS INT NOT NULL AUTO_INCREMENT,
+    IDcarro INT NOT NULL,
+    FOREIGN KEY(IDcarro) REFERENCES Carro(IDcarro),
+    DataEmissao DATETIME NOT NULL,
+    dataEntrega DATETIME NOT NULL
+);
+CREATE TABLE servicos(
+	IDservico INT NOT NULL AUTO_INCREMENT,
+    descricao VARCHAR(100) NOT NULL,
+    valor DECIMAL(5,2) NOT NULL,
+    PRIMARY KEY(IDservico)
+);
