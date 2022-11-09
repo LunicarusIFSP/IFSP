@@ -22,18 +22,19 @@ CREATE TABLE cliente(
     numero VARCHAR(5) NOT NULL,
     complemento VARCHAR(30),
     telefone numeric(14) NOT NULL,
-    PRIMARY KEY (CPF)
+    PRIMARY KEY (CPF_CNPJ)
 );
 
 CREATE TABLE carro(
 	IDcarro INT NOT NULL AUTO_INCREMENT,
     placa VARCHAR(15),
-    descricao VARCHAR(100)
+    descricao VARCHAR(100),
+    PRIMARY KEY(IDcarro)
 );
 CREATE TABLE Cliente_Carro(
 	IDcliente NUMERIC(11) NOT NULL, 
-	IDcarro INT NOT NULL AUTO_INCREMENT,
-    FOREIGN KEY (IDcliente) REFERENCES cliente(CPF_CNJcliente),
+	IDcarro INT NOT NULL,
+    FOREIGN KEY (IDcliente) REFERENCES cliente(CPF_CNPJ),
     FOREIGN KEY (IDcarro) REFERENCES carro(IDcarro)
     );
 CREATE TABLE OS(
@@ -41,6 +42,7 @@ CREATE TABLE OS(
 	ID_OS INT NOT NULL AUTO_INCREMENT,
     IDcarro INT NOT NULL,
     FOREIGN KEY(IDcarro) REFERENCES Carro(IDcarro),
+    PRIMARY KEY (ID_OS),
     DataEmissao DATETIME NOT NULL,
     dataEntrega DATETIME NOT NULL
 );
